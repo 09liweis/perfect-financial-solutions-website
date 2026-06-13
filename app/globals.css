@@ -1,0 +1,38 @@
+@import "tailwindcss";
+
+/* Theme CSS custom properties - set by ThemeProvider dynamically */
+:root {
+  --color-primary: #1a365d;
+  --color-primary-hover: #2a4a7f;
+  --color-primary-light: #2b6cb0;
+  --color-primary-bg: #ebf4ff;
+  --color-secondary: #3182ce;
+  --color-accent: #e2a83e;
+  --color-accent-hover: #c98d2e;
+  --color-surface: #ffffff;
+  --color-surface-alt: #f7fafc;
+  --color-border: #e2e8f0;
+}
+
+@theme inline {
+  --color-background: var(--color-surface);
+  --color-foreground: #171717;
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--color-surface);
+  color: #171717;
+  font-family: var(--font-sans, Arial, Helvetica, sans-serif);
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom utility: text-balance for headings */
+.text-balance {
+  text-wrap: balance;
+}
